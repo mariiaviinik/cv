@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+    font-style: Regular;
+    font-size: 13px;
+    line-height: 15px;
+}
+.page{
+    width: 595px;
+    margin: auto;
+}
+body{
+    background-color: #E5E5E5;
+}
+%dash_border_left{
+    border-left: 1px dashed #DEE2ED;
+}
+%col_start{
+    grid-column-start: 2;
+}
+%two_col{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 57px;
+}
+/* #region about */ 
+.about{
+    background-color: #474D5F;
+    color: #FFE8D5;
+    padding: 27px 38px;
+    display: flex;
+}
+$image-size:129px;
+.about_img{
+    width: $image-size;
+    height: $image-size;
+    object-fit: cover;
+    margin-right: 44px;
+    border-radius: 50%;
+}
+.about_name, .about_city_age{
+    margin-bottom: 11px;
+}
+/* #endregion */ 
+main{
+    padding: 0 38px;
+    background-color: white;
+}
+/* #region contacts */ 
+.contacts{
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts_link{
+    text-decoration: none;
+    color: #474D5F;
+}
+/* #endregion */ 
+/* #region info */ 
+.info{
+    border-top: 1px solid #DEE2ED;
+    padding-bottom: 12px;
+}
+.info_title{
+    display: absolute;
+    width: 100%;
+    background-color: #FFE8D5;
+    margin: 12px 0;
+    font-size: 18px;
+    line-height: 21px;
+}
+.info_content{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    row-gap: 31px;
+}
+/* #endregion */ 
+/* #region education */ 
+.education{
+    @extend %dash_border_left;
+    @extend %col_start;
+    padding-left: 11px;
+}
+.education_title{
+    text-transform: capitalize;
+}
+.education_description{
+    margin-top: 12px;
+}
+/* #endregion */
+/* #region courses */ 
+.courses{
+    @extend %two_col;
+}
+.courses_item{
+    margin-top: 12px;
+    list-style-type: none;
+}
+/* #endregion */
+/* #region skills */ 
+.skills{
+    @extend %col_start;
+}
+.skills_holder{
+    @extend %two_col;
+}
+.skills_list{
+    @extend %dash_border_left;
+    padding-left: 11px;
+}
+/* #endregion */
